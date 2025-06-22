@@ -1,0 +1,15 @@
+# Firebase core
+-keep class com.google.firebase.** { *; }
+-dontwarn com.google.firebase.**
+
+# Google Play services
+-keep class com.google.android.gms.** { *; }
+-dontwarn com.google.android.gms.**
+
+# Keep classes for Firestore
+-keep class com.google.firestore.v1.** { *; }
+-dontwarn com.google.firestore.v1.**
+
+# General
+-keepattributes Signature
+-keepattributes *Annotation*

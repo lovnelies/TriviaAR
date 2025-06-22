@@ -1,0 +1,112 @@
+{
+    "questions": [
+      {
+        "targetName": "ImageTarget1",
+        "question": "¿Que personal de DUOC UC se encuentra en el portico?",
+        "answers": ["Auxiliar de Seguridad", "Auxiliar de Mantencion", "Auxiliar de Servicios Generales"],
+        "correctAnswer": "Auxiliar de Seguridad"
+      },
+      {
+        "targetName": "ImageTarget2",
+        "question": "¿Cuales deportes se pueden practicar al ver la cancha?",
+        "answers": ["Futbol", "Basquetbol", "Ambos"],
+        "correctAnswer": "Ambos"
+      },
+      {
+        "targetName": "ImageTarget3",
+        "question": "La definición de la palabra ANFITEATRO es:",
+        "answers": ["Un tipo de edificio utilizado exclusivamente para reuniones academicas", "Recinto al aire libre que se utiliza para entretenimiento, espectaculos y deportes", "Una sala cerrada destinada a eventos privados"],
+        "correctAnswer": "Recinto al aire libre que se utiliza para entretenimiento, espectaculos y deportes"
+      },
+      {
+        "targetName": "ImageTarget4",
+        "question": "En el punto verde ¿Que se deposita en el color amarillo?",
+        "answers": ["Latas", "Vidrios", "Plasticos"],
+        "correctAnswer": "Plasticos"
+      },
+      {
+        "targetName": "ImageTarget5",
+        "question": "¿Cual de las siguientes tarjetas de JUNAEB es aceptada en la cafetería?",
+        "answers": ["Beca de Alimentacion para la Educacion Superior (BAES)", "Tarjeta Nacional Estudiantil (TNE)", "Beca de Mantencion para la Educacion Superior (BMES)"],
+        "correctAnswer": "Beca de Alimentacion para la Educacion Superior (BAES)"
+      },
+      {
+        "targetName": "ImageTarget6",
+        "question": "¿Que servicios ofrece la biblioteca?",
+        "answers": ["Ofrece salas de estudio y prestamo de equipos audiovisuales", "Dispone de areas de lectura y servicio de impresion", "Ofrece salas de estudio y prestamo de libros"],
+        "correctAnswer": "Ofrece salas de estudio y prestamo de libros"
+      },
+      {
+        "targetName": "ImageTarget7",
+        "question": "¿Quien es la encargada del Punto Estudiantil?",
+        "answers": ["Maria Jose Perez", "Makarena Barrios", "Carla Fernandez"],
+        "correctAnswer": "Makarena Barrios"
+      },
+      {
+        "targetName": "ImageTarget8",
+        "question": "¿Qué caracteristica especial tiene la capilla en cuanto a su diseño y funcionalidad?",
+        "answers": ["Esta construida completamente con materiales reciclados de la zona", "Posee un diseño subterraneo para mantener la acustica adecuada", "Tiene la capacidad de abrirse al exterior y formar parte de una explanada con anfiteatro"],
+        "correctAnswer": "Tiene la capacidad de abrirse al exterior y formar parte de una explanada con anfiteatro"
+      },
+      {
+        "targetName": "ImageTarget9",
+        "question": "¿Que caracteristica distintiva tiene el Aula Magna del Campus Nacimiento de Duoc UC en cuanto a su diseño arquitectonico?",
+        "answers": ["Esta construida completamente con madera nativa de la region", "Posee una estructura modular que permite ajustar su capacidad", "Se integra al entorno natural mediante el uso de materiales nobles como hormigon y madera"],
+        "correctAnswer": "Se integra al entorno natural mediante el uso de materiales nobles como hormigon y madera"
+      },
+      {
+        "targetName": "ImageTarget10",
+        "question": "¿Cual es la principal funcion del pañol?",
+        "answers": ["Gestionar el prestamo de libros y material bibliografico", "Proveer uniformes y materiales deportivos para las clases de educación fisica", "Almacenar herramientas y equipos utilizados en talleres y laboratorios"],
+        "correctAnswer": "Almacenar herramientas y equipos utilizados en talleres y laboratorios"
+      },
+      {
+        "targetName": "ImageTarget11",
+        "question": "¿Que carrera relacionada con el area de informatica se imparte en el Campus Nacimiento?",
+        "answers": ["Analista Programador", "Tecnico en Mantenimiento Electromecanico", "Tecnico en Gestion Logistica"],
+        "correctAnswer": "Analista Programador"
+      },
+      {
+        "targetName": "ImageTarget12",
+        "question": "¿Que carrera del Campus Nacimiento se beneficia del laboratorio para realizar practicas de montaje, desmontaje y mantenimiento de sistemas mecanicos?",
+        "answers": ["Tecnico en Mantenimiento Electromecanico", "Tecnico en Electricidad y Automatizacion Industrial", "Tecnico en Gestion Logistica"],
+        "correctAnswer": "Tecnico en Electricidad y Automatizacion Industrial"
+      },
+      {
+        "targetName": "ImageTarget13",
+        "question": "¿Que carrera del Campus Nacimiento se centra en el diseño y desarrollo de instalaciones electricas y sistemas de automatizacion industrial?",
+        "answers": ["Tecnico en Mantenimiento Electromecanico", "Tecnico en Electricidad y Automatizacion Industrial", "Tecnico en Gestion Logistica"],
+        "correctAnswer": "Tecnico en Electricidad y Automatizacion Industrial"
+      },
+      {
+        "targetName": "ImageTarget14",
+        "question": "¿Que significa la sigla 'CITT'?",
+        "answers": ["Centro de Informacion y Tecnologia de Telecomunicaciones", "Centro de Integracion y Transformacion Tecnologica", "Centro de Innovacion y Transferencia Tecnologica"],
+        "correctAnswer": "Centro de Innovacion y Transferencia Tecnologica"
+      },
+      {
+        "targetName": "ImageTarget15",
+        "question": "¿Donde se encuentra el director del campus?",
+        "answers": ["Oficina multiproposito", "Sala de Docentes", "Oficinas de administracion"],
+        "correctAnswer": "Oficinas de administracion"
+      },
+      {
+        "targetName": "ImageTarget16",
+        "question": "¿Que nombre recibe la sala o espacio destinado al personal docente?",
+        "answers": ["Sala de Docentes", "Sala de Profesores", "Sala de Asistentes"],
+        "correctAnswer": "Sala de Docentes"
+      },
+      {
+        "targetName": "ImageTarget17",
+        "question": "¿Que tipo de soporte brinda el area de Servicios Digitales(anteriormente CETECOM)?",
+        "answers": ["Soporte en la gestion de cuentas de correo electronico y plataformas de aprendizaje en linea", "Asesoria en el uso de herramientas digitales y recursos tecnologicos para estudiantes y personal", "Ambas"],
+        "correctAnswer": "Ambas"
+      },
+      {
+        "targetName": "ImageTarget18",
+        "question": "¿Que caracteristica destaca del Laboratorio de Enfermeria en el Campus Nacimiento?",
+        "answers": ["Se encuentra ubicado en el centro de Nacimiento, facilitando el acceso de los estudiantes", "Ofrece practicas clinicas en hospitales locales desde el primer semestre", "Esta equipado con tecnologia de vanguardia y escenarios simulados"],
+        "correctAnswer": "Esta equipado con tecnologia de vanguardia y escenarios simulados"
+      }
+    ]
+  }

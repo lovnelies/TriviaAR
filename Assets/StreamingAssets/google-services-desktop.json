@@ -1,0 +1,31 @@
+{
+  "project_info": {
+    "project_number": "168018905729",
+    "project_id": "triviar-63a1c",
+    "storage_bucket": "triviar-63a1c.firebasestorage.app",
+    "firebase_url": "https://triviar-63a1c-default-rtdb.firebaseio.com/"
+
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:168018905729:android:7d7fe951a9de76ea719b80",
+        "android_client_info": {
+          "package_name": "com.lovnelies.triviaar"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoatcJRjTthtaQJhjnLvPvj6hR56xz_Rc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

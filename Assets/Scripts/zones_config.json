@@ -1,0 +1,45 @@
+{
+    "zones": {
+      "Zona1": {
+        "targets": ["ImageTarget1", "ImageTarget2", "ImageTarget3", "ImageTarget4"],
+        "clues": [
+          "Pista: Lugar para practicar deporte",
+          "Pista: Se puede realizar un recital al aire libre",
+          "Pista: Contenedores que ayudan a la seleccion de basura"
+        ],
+        "nextZone": "Zona2"
+      },
+      "Zona2": {
+        "targets": ["ImageTarget5", "ImageTarget6", "ImageTarget7", "ImageTarget8", "ImageTarget9"],
+        "clues": [
+          "Pista: Puedo comer en este lugar",
+          "Pista: Espacio con muchos libros",
+          "Pista: Necesito conocer los talleres extracurriculares existentes",
+          "Pista: Se pueden realizar misas",
+          "Pista: Puedo realizar charlas, conferencias, presentaciones en un amplio espacio"
+        ],
+        "nextZone": "Zona3"
+      },
+      "Zona3": {
+        "targets": ["ImageTarget10", "ImageTarget11", "ImageTarget12", "ImageTarget13", "ImageTarget14"],
+        "clues": [
+          "Pista: Hay impresoras 3D",
+          "Pista: Voy a conseguir herramientas y equipos especializados",
+          "Pista: Hay paneles para realizar distintos tipos de conexiones electricas",
+          "Pista: Hay paneles con circuitos neumáticos para practicar",
+          "Pista: Hay computadores en los cuales puedo trabajar"
+        ],
+        "nextZone": "Zona4"
+      },
+      "Zona4": {
+        "targets": ["ImageTarget15", "ImageTarget16", "ImageTarget17", "ImageTarget18"],
+        "clues": [
+          "Pista: Lugar donde puedo encontrar al director de carrera",
+          "Pista: Hay docentes que les imparten clases",
+          "Pista: Hay una sala de simulacion de pacientes",
+          "Pista: Estoy frente a la escalera"
+        ],
+        "nextZone": "ranking"
+      }
+    }
+  }
