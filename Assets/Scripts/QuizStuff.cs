@@ -189,7 +189,6 @@ public class QuizStuff : MonoBehaviour
             OnTargetFound("ImageTarget1");
         }
 
-        // Cargar datos del JSON en lugar de hardcodear
         LoadQuizData();
         
         nextButton?.onClick.AddListener(NextClick);
@@ -272,26 +271,6 @@ public class QuizStuff : MonoBehaviour
         scannedQRs.Add("Zona2", new List<string>());
         scannedQRs.Add("Zona3", new List<string>());
         scannedQRs.Add("Zona4", new List<string>());
-    }
-
-    // Método de respaldo en caso de que el JSON no funcione
-    private void LoadHardcodedData()
-    {
-        Debug.LogWarning("Cargando datos hardcodeados como respaldo");
-        
-        // Aquí puedes mantener tu código original como respaldo
-        // Por brevedad, no lo incluyo todo, pero sería el mismo código que tenías antes
-        
-        questionDictionary.Add("ImageTarget1", new QuestionData
-        {
-            targetId = "ImageTarget1",
-            zone = "Zona1",
-            question = "¿Que personal de DUOC UC se encuentra en el portico?",
-            answers = new string[] { "Auxiliar de Seguridad", "Auxiliar de Mantencion", "Auxiliar de Servicios Generales" },
-            correctAnswer = "Auxiliar de Seguridad"
-        });
-        
-        // ... continuar con las demás preguntas
     }
 
     public void UpdatePenaltyText(TMP_Text penaltyText) {
