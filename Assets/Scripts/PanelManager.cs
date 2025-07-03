@@ -38,68 +38,58 @@ public class PanelManager : MonoBehaviour
     // Método para manejar el clic en "Continuar"
     public void OnContinueClicked()
     {
-        Debug.Log("Botón Continuar clickeado.");
+        //Debug.Log("Botón Continuar clickeado.");
 
-        // Desactivar el panel actual
         DeactivatePanel(currentPanelIndex);
 
-        // Pasar al siguiente panel
         currentPanelIndex++;
 
-        Debug.Log("Índice del panel actual: " + currentPanelIndex);
+        //Debug.Log("Índice del panel actual: " + currentPanelIndex);
 
-        // Si hay más paneles, activar el siguiente
         if (currentPanelIndex < panels.Length)
         {
             ActivatePanel(currentPanelIndex);
         }
         else
         {
-            Debug.Log("No hay más paneles. Cambiando a la escena Zona1.");
-            // Cargar la escena Zona1
-            SceneManager.LoadScene("Zona1");
+            //Debug.Log("No hay más paneles. Cambiando a la escena Zona1.");
+            SceneManager.LoadScene("NameScene");
         }
 
-        // Actualizar el texto del botón "Continuar"
         UpdateContinueButtonText();
     }
 
-    // Método para manejar el clic en "Salir"
     private void OnExitClicked()
     {
-        Debug.Log("Salir de las instrucciones.");
-        // Aquí puedes añadir lógica para cerrar las instrucciones o cambiar de escena
+        //Debug.Log("Salir de las instrucciones.");
     }
 
-    // Método para activar un panel específico
     private void ActivatePanel(int index)
     {
         if (index >= 0 && index < panels.Length)
         {
             panels[index].SetActive(true);
-            Debug.Log("Panel activado: " + panels[index].name);
+            //Debug.Log("Panel activado: " + panels[index].name);
         }
         else
         {
-            Debug.LogError("Índice de panel fuera de rango: " + index);
+            //Debug.LogError("Índice de panel fuera de rango: " + index);
         }
     }
 
-    // Método para desactivar un panel específico
     private void DeactivatePanel(int index)
     {
         if (index >= 0 && index < panels.Length)
         {
             panels[index].SetActive(false);
-            Debug.Log("Panel desactivado: " + panels[index].name);
+            //Debug.Log("Panel desactivado: " + panels[index].name);
         }
         else
         {
-            Debug.LogError("Índice de panel fuera de rango: " + index);
+            //Debug.LogError("Índice de panel fuera de rango: " + index);
         }
     }
 
-    // Método para actualizar el texto del botón "Continuar"
     private void UpdateContinueButtonText()
     {
         if (continuarText != null)

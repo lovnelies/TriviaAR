@@ -236,7 +236,7 @@ public class QuizStuff : MonoBehaviour
             // Cargar pistas
             zoneClues = quizData.zoneClues.ToDictionary();
 
-            Debug.Log("Datos del quiz cargados exitosamente desde JSON");
+            //Debug.Log("Datos del quiz cargados exitosamente desde JSON");
         }
         catch (System.Exception e)
         {

@@ -14,38 +14,30 @@ public class TypewriterEffect : MonoBehaviour
     public Button  botoncito;
     public GameObject  continuar;
     public GameObject  salir;
-    private string fullText; // Texto completo a mostrar
+    private string fullText;
 
      private void Start()
     {
-        // Obtener el texto completo del componente TMP_Text
         fullText = textComponent.text;
 
-        // Desactivar los botones al inicio
         if (continuar != null) continuar.SetActive(false);
         if (salir != null) salir.SetActive(false);
 
-        // Iniciar el efecto typewriter
         StartCoroutine(ShowText());
     }
 
     private IEnumerator ShowText()
     {
-        // Inicializar el texto vacío
-        // Inicializar el texto vacío
         textComponent.text = "";
 
-        // Mostrar el texto letra por letra
         for (int i = 0; i < fullText.Length; i++)
         {
-            textComponent.text += fullText[i]; // Añadir un carácter
-            yield return new WaitForSeconds(delayBetweenCharacters); // Esperar antes de añadir el siguiente carácter
+            textComponent.text += fullText[i];
+            yield return new WaitForSeconds(delayBetweenCharacters);
         }
 
-        // Esperar un momento después de completar el texto
         yield return new WaitForSeconds(delayAfterComplete);
 
-        // Reactivar los botones al finalizar el typewriter
         if (continuar != null) continuar.SetActive(true);
         if (salir != null) salir.SetActive(true);
             
@@ -68,7 +60,6 @@ if (textToShow != null)
             Debug.LogError("No se asignó una RawImage en el Inspector.");
         }
 
-        // Mostrar la RawImage al finalizar el efecto typewriter
         if (rawImageToShow != null)
         {
             rawImageToShow.gameObject.SetActive(true);

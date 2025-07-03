@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RotacionAutomatica : MonoBehaviour 
 {
-    public float velocidadRotacion = 30f; // grados por segundo
+    public float velocidadRotacion = 30f;
     
     void Update() 
     {

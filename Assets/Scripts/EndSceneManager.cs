@@ -27,7 +27,7 @@ public class EndSceneManager : MonoBehaviour
     }
     else
     {
-        Debug.LogError("No se encontró la instancia de QuizStuff.");
+        //Debug.LogError("No se encontró la instancia de QuizStuff.");
     }
 }
 }

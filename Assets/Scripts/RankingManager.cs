@@ -11,9 +11,11 @@ public class RankingManager : MonoBehaviour
     public TMP_Text playerStatsText;
     public Button playAgainButton;
     public Button exitButton;
+    public Button verPremioButton;
     public GameObject loadingPanel;
     public RectTransform contentTransform; 
 
+    private bool playerIsInTop3 = false; 
     
     void Start()
     {
@@ -22,6 +24,12 @@ public class RankingManager : MonoBehaviour
             
         if (exitButton != null)
             exitButton.onClick.AddListener(ExitGame);
+            
+        if (verPremioButton != null)
+        {
+            verPremioButton.onClick.AddListener(MostrarPremio);
+            verPremioButton.gameObject.SetActive(false); 
+        }
         
         ShowPlayerStats();
         LoadAndDisplayRanking();
@@ -62,7 +70,9 @@ public class RankingManager : MonoBehaviour
         if (rankingText == null) return;
         string currentPlayerName = FirebaseManager.Instance.GetPlayerName();
         
-        string rankingDisplay = "🏆 TOP 10 RANKING 🏆\n\n";
+        string rankingDisplay = "--TOP 10 RANKING-- \n\n";
+        
+        playerIsInTop3 = false;
         
         for (int i = 0; i < rankings.Count; i++)
         {
@@ -71,26 +81,30 @@ public class RankingManager : MonoBehaviour
             
             switch (i)
             {
-                case 0: medal = "🥇"; break;
-                case 1: medal = "🥈"; break;
-                case 2: medal = "🥉"; break;
+                case 0: medal = "-"; break;
+                case 1: medal = "-"; break;
+                case 2: medal = "-"; break;
                 default: medal = $"{i + 1}."; break;
             }
             
             string line = string.Format("{0} {1,-10} {2,5} pts - {3}\n",
-    medal,
-    player.nombre,
-    player.puntaje,
-    FormatTime(player.tiempo));
+                medal,
+                player.nombre,
+                player.puntaje,
+                FormatTime(player.tiempo));
 
-if (player.nombre == currentPlayerName)
-{
-    // Agrega ★ y aplica color dorado al jugador actual
-    line = $"<color=#FFD700>{medal} ★ {player.nombre,-10} {player.puntaje,5} pts - {FormatTime(player.tiempo)}</color>\n";
-}
+            if (player.nombre == currentPlayerName)
+            {
+                if (i < 3)
+                {
+                    playerIsInTop3 = true;
+                }
+                
+                // Agrega ★ y aplica color dorado al jugador actual
+                line = $"<color=#FFD700>{medal} ★ {player.nombre,-10} {player.puntaje,5} pts - {FormatTime(player.tiempo)}</color>\n";
+            }
 
-rankingDisplay += line;
-
+            rankingDisplay += line;
         }
         
         if (rankings.Count == 0)
@@ -99,13 +113,39 @@ rankingDisplay += line;
         }
         
         rankingText.text = rankingDisplay;
-        // Forzar un resize basado en el texto
-LayoutRebuilder.ForceRebuildLayoutImmediate(rankingText.rectTransform);
+        
+        // Show th ebutton if the player is in top 3 :333333
+        ShowPremioButtonIfEligible();
+        
+        LayoutRebuilder.ForceRebuildLayoutImmediate(rankingText.rectTransform);
 
-// Ajusta el alto del Content para que el Scroll funcione bien
-float newHeight = rankingText.preferredHeight + 20f; // un poco de margen
-contentTransform.sizeDelta = new Vector2(contentTransform.sizeDelta.x, newHeight);
-
+        float newHeight = rankingText.preferredHeight + 20f;
+        contentTransform.sizeDelta = new Vector2(contentTransform.sizeDelta.x, newHeight);
+    }
+    
+    void ShowPremioButtonIfEligible()
+    {
+        if (verPremioButton != null)
+        {
+            if (playerIsInTop3)
+            {
+                verPremioButton.gameObject.SetActive(true);
+                TMP_Text buttonText = verPremioButton.GetComponentInChildren<TMP_Text>();
+                if (buttonText != null)
+                {
+                    buttonText.text = "VER PREMIO";
+                }
+            }
+            else
+            {
+                verPremioButton.gameObject.SetActive(false);
+            }
+        }
+    }
+    
+    void MostrarPremio()
+    {
+        SceneManager.LoadScene("prize"); 
     }
     
     string FormatTime(float timeInSeconds)
@@ -117,7 +157,6 @@ contentTransform.sizeDelta = new Vector2(contentTransform.sizeDelta.x, newHeight
     
     public void PlayAgain()
     {
-        // Reiniciar el juego
         SceneManager.LoadScene("NameScene");
     }
     

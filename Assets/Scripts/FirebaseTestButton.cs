@@ -7,16 +7,16 @@ public class FirebaseTestButton : MonoBehaviour
 
     void Start()
 {
-    Debug.Log("FirebaseTestButton activo");
+    //Debug.Log("FirebaseTestButton activo");
 
     if (testButton != null)
     {
-        Debug.Log("Botón asignado correctamente");
+        //Debug.Log("Botón asignado correctamente");
         testButton.onClick.AddListener(SaveTestData);
     }
     else
     {
-        Debug.LogError("No se asignó el botón de prueba.");
+        //Debug.LogError("No se asignó el botón de prueba.");
     }
 }
 
@@ -34,11 +34,11 @@ public class FirebaseTestButton : MonoBehaviour
         FirebaseManager.Instance.SetPlayerName(nombre);
         FirebaseManager.Instance.SavePlayerData(puntaje, tiempo);
 
-        Debug.Log($"Intentando guardar datos de prueba: {nombre}, Score: {puntaje}, Tiempo: {tiempo}");
+        //Debug.Log($"Intentando guardar datos de prueba: {nombre}, Score: {puntaje}, Tiempo: {tiempo}");
     }
     else
     {
-        Debug.LogError("FirebaseManager no está disponible.");
+        //Debug.LogError("FirebaseManager no está disponible.");
     }
 }
 

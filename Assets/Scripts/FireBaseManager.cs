@@ -44,7 +44,7 @@ public class FirebaseManager : MonoBehaviour
         }
         else
         {
-            Debug.LogError($"Error al inicializar Firebase: {dependencyStatus}");
+            //Debug.LogError($"Error al inicializar Firebase: {dependencyStatus}");
         }
     });
 }
@@ -52,7 +52,7 @@ public class FirebaseManager : MonoBehaviour
     public void SetPlayerName(string name)
     {
         playerName = name;
-        Debug.Log("Nombre del jugador guardado: " + playerName);
+        //Debug.Log("Nombre del jugador guardado: " + playerName);
     }
     
     public string GetPlayerName()
@@ -64,13 +64,13 @@ public class FirebaseManager : MonoBehaviour
     {
         if (!isFirebaseReady)
         {
-            Debug.LogError("Firebase no está listo");
+            //Debug.LogError("Firebase no está listo");
             return;
         }
         
         if (string.IsNullOrEmpty(playerName))
         {
-            Debug.LogError("El nombre del jugador no está configurado");
+            //Debug.LogError("El nombre del jugador no está configurado");
             return;
         }
         
@@ -81,11 +81,11 @@ public class FirebaseManager : MonoBehaviour
             .ContinueWithOnMainThread(task => {
                 if (task.IsCompletedSuccessfully)
                 {
-                    Debug.Log("Datos del jugador guardados correctamente en Firebase");
+                    //Debug.Log("Datos del jugador guardados correctamente en Firebase");
                 }
                 else
                 {
-                    Debug.LogError("Error al guardar datos: " + task.Exception);
+                    //Debug.LogError("Error al guardar datos: " + task.Exception);
                 }
             });
     }
@@ -125,7 +125,7 @@ public class FirebaseManager : MonoBehaviour
             }
             else
             {
-                Debug.LogError("Error al cargar ranking: " + task.Exception);
+                //Debug.LogError("Error al cargar ranking: " + task.Exception);
                 callback?.Invoke(new List<PlayerGameData>());
             }
         });
@@ -134,7 +134,7 @@ public class FirebaseManager : MonoBehaviour
 {
     if (!isFirebaseReady)
     {
-        Debug.LogError("Firebase no está listo");
+        //Debug.LogError("Firebase no está listo");
         callback?.Invoke(false);
         return;
     }
@@ -147,14 +147,14 @@ public class FirebaseManager : MonoBehaviour
         {
             if (task.IsCompletedSuccessfully)
             {
-                Debug.Log("Nombre guardado correctamente en Firebase");
+                //Debug.Log("Nombre guardado correctamente en Firebase");
                 // Guardamos localmente también para seguir usando
                 SetPlayerName(playerName);
                 callback?.Invoke(true);
             }
             else
             {
-                Debug.LogError("Error al guardar el nombre: " + task.Exception);
+                //Debug.LogError("Error al guardar el nombre: " + task.Exception);
                 callback?.Invoke(false);
             }
         });
