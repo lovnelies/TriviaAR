@@ -242,7 +242,7 @@ public class QuizStuff : MonoBehaviour
         {
             Debug.LogError("Error al cargar datos del quiz: " + e.Message);
             // Fallback: cargar datos hardcodeados si el JSON falla
-            LoadHardcodedData();
+            //LoadHardcodedData();
         }
     }
 
