@@ -850,7 +850,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 4n
+  mTrackableName: ImageTarget4
   mInitializedInEditor: 1
   mDataSetPath: 
   mAspectRatio: 1
@@ -891,7 +891,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 290596288}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 4n
+  mTargetName: ImageTarget4
   mDatasetName: 
   mCastedBehaviour: {fileID: 290596288}
   mMeshFilter: {fileID: 0}
@@ -2863,7 +2863,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 1
+  mTrackableName: ImageTarget1
   mInitializedInEditor: 1
   mDataSetPath: 
   mAspectRatio: 1
@@ -3789,7 +3789,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 2n
+  mTrackableName: ImageTarget2
   mInitializedInEditor: 1
   mDataSetPath: 
   mAspectRatio: 1
@@ -3830,7 +3830,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 1502590932}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 2n
+  mTargetName: ImageTarget2
   mDatasetName: 
   mCastedBehaviour: {fileID: 1502590932}
   mMeshFilter: {fileID: 0}
@@ -4282,7 +4282,7 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 3
+  mTrackableName: ImageTarget3
   mInitializedInEditor: 1
   mDataSetPath: 
   mAspectRatio: 1
@@ -4323,7 +4323,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 1651306908}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 3
+  mTargetName: ImageTarget3
   mDatasetName: 
   mCastedBehaviour: {fileID: 1651306908}
   mMeshFilter: {fileID: 0}
