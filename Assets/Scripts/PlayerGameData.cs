@@ -11,6 +11,6 @@ public class PlayerGameData
         this.nombre = nombre;
         this.puntaje = puntaje;
         this.tiempo = tiempo;
-        this.fecha = System.DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ssZ");
+        this.fecha = System.DateTime.UtcNow.ToString("yyyy-MM-dd"); // <-- GUARDAMOS FECHA ACTUAL
     }
 }

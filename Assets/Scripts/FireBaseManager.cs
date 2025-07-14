@@ -91,45 +91,51 @@ public class FirebaseManager : MonoBehaviour
     }
     
     public void LoadRankings(System.Action<List<PlayerGameData>> callback)
+{
+    if (!isFirebaseReady)
     {
-        if (!isFirebaseReady)
+        Debug.LogError("Firebase no está listo");
+        return;
+    }
+
+    string todayDate = System.DateTime.UtcNow.ToString("yyyy-MM-dd");
+
+    databaseReference.Child("rankings").GetValueAsync().ContinueWithOnMainThread(task => {
+        if (task.IsCompletedSuccessfully)
         {
-            Debug.LogError("Firebase no está listo");
-            return;
-        }
-        
-        databaseReference.Child("rankings").GetValueAsync().ContinueWithOnMainThread(task => {
-            if (task.IsCompletedSuccessfully)
+            DataSnapshot snapshot = task.Result;
+            List<PlayerGameData> rankings = new List<PlayerGameData>();
+
+            foreach (DataSnapshot childSnapshot in snapshot.Children)
             {
-                DataSnapshot snapshot = task.Result;
-                List<PlayerGameData> rankings = new List<PlayerGameData>();
-                
-                foreach (DataSnapshot childSnapshot in snapshot.Children)
+                string json = childSnapshot.GetRawJsonValue();
+                if (!string.IsNullOrEmpty(json))
                 {
-                    string json = childSnapshot.GetRawJsonValue();
-                    if (!string.IsNullOrEmpty(json))
+                    PlayerGameData player = JsonUtility.FromJson<PlayerGameData>(json);
+
+                    // Filtramos por fecha
+                    if (player.fecha == todayDate)
                     {
-                        PlayerGameData player = JsonUtility.FromJson<PlayerGameData>(json);
                         rankings.Add(player);
                     }
                 }
-                
-                // Ordenar por puntaje descendente, luego por tiempo ascendente
-                rankings = rankings.OrderBy(p => p.tiempo)
-                   .ThenByDescending(p => p.puntaje)
-                   .Take(10)
-                   .ToList();
+            }
 
-                
-                callback?.Invoke(rankings);
-            }
-            else
-            {
-                //Debug.LogError("Error al cargar ranking: " + task.Exception);
-                callback?.Invoke(new List<PlayerGameData>());
-            }
-        });
-    }
+            // Ordenar por puntaje descendente, luego por tiempo ascendente
+            rankings = rankings.OrderBy(p => p.tiempo)
+                .ThenByDescending(p => p.puntaje)
+                .Take(10)
+                .ToList();
+
+            callback?.Invoke(rankings);
+        }
+        else
+        {
+            callback?.Invoke(new List<PlayerGameData>());
+        }
+    });
+}
+
     public void SavePlayerNameToFirebase(string playerName, System.Action<bool> callback)
 {
     if (!isFirebaseReady)
